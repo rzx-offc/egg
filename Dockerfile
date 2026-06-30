@@ -2,6 +2,8 @@ FROM debian:bullseye-slim
 
 LABEL author="rizx" maintainer="rizxddev@gmail.com"
 
+RUN echo 'Acquire::ForceIPv4 "true";' > /etc/apt/apt.conf.d/99force-ipv4
+
 ENV DEBIAN_FRONTEND=noninteractive \
     USER=container \
     HOME=/home/container \
